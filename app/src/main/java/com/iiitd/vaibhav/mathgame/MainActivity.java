@@ -30,8 +30,15 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Toast.makeText(getApplicationContext(), "Round Reset", Toast.LENGTH_SHORT).show();
+                current_question = -1;
+                win_count = 0;
+                new_question = false;
+                EditText controller_txt_score_display = (EditText)findViewById(R.id.txt_score_display);
+                String score = "" + win_count + " Correct Answers !";
+                controller_txt_score_display.setText(score, TextView.BufferType.EDITABLE);
+                EditText controller_txt_question_display = (EditText)findViewById(R.id.txt_question_display);
+                controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability !. Click \'Next Question\' to start", TextView.BufferType.EDITABLE);
             }
         });
 
@@ -45,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         layoutParams.height = height/4 + (height/2 - height/4)/2;
         controller_txt_question_display.setLayoutParams(layoutParams); //setting the layout parameters
         controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability !. Click \'Next Question\' to start", TextView.BufferType.EDITABLE);
+        EditText controller_txt_score_display = (EditText)findViewById(R.id.txt_score_display);
+        String score = "" + win_count + " Correct Answers !";
+        controller_txt_score_display.setText(score, TextView.BufferType.EDITABLE);
     }
 
     public void onBtnClickListner(View v){
