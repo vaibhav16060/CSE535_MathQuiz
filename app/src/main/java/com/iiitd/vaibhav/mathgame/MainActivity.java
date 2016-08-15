@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String score = "" + win_count + " Correct Answers !";
                 controller_txt_score_display.setText(score, TextView.BufferType.EDITABLE);
                 EditText controller_txt_question_display = (EditText)findViewById(R.id.txt_question_display);
-                controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability !. Click \'Next Question\' to start", TextView.BufferType.EDITABLE);
+                controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability ! Click \'New Question\' to start", TextView.BufferType.EDITABLE);
             }
         });
 
