@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 String score = "" + win_count + " Correct Answers !";
                 controller_txt_score_display.setText(score, TextView.BufferType.EDITABLE);
                 EditText controller_txt_question_display = (EditText)findViewById(R.id.txt_question_display);
-                controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability ! Click \'New Question\' to start", TextView.BufferType.EDITABLE);
+                controller_txt_question_display.setText("Welcome to MathGame. Test your math ability ! Click \'New Question\' to start", TextView.BufferType.EDITABLE);
             }
         });
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         ViewGroup.LayoutParams layoutParams = controller_txt_question_display.getLayoutParams(); //getting the layout parameters
         layoutParams.height = height/4 + (height/2 - height/4)/2;
         controller_txt_question_display.setLayoutParams(layoutParams); //setting the layout parameters
-        controller_txt_question_display.setText("Welcome to PrimeFun. Test your math ability !. Click \'New Question\' to start", TextView.BufferType.EDITABLE);
+        controller_txt_question_display.setText("Welcome to MathGame. Test your math ability ! Click \'New Question\' to start", TextView.BufferType.EDITABLE);
         EditText controller_txt_score_display = (EditText)findViewById(R.id.txt_score_display);
         String score = "" + win_count + " Correct Answers !";
         controller_txt_score_display.setText(score, TextView.BufferType.EDITABLE);
