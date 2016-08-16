@@ -19,6 +19,23 @@ public class MainActivity extends AppCompatActivity {
 
     int win_count = 0, current_question = -1;
     boolean new_question = false;
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        savedInstanceState.putInt("win_count", win_count);
+        savedInstanceState.putInt("current_question", current_question);
+        savedInstanceState.putBoolean("new_question", new_question);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        win_count = savedInstanceState.getInt("win_count");
+        current_question = savedInstanceState.getInt("current_question");
+        new_question = savedInstanceState.getBoolean("new_question");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
